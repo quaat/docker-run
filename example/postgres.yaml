@@ -1,0 +1,21 @@
+container:
+  image: postgres:latest
+  name: psql
+  network: scinet
+  volume:
+    - postgresdata: /var/lib/postgresql/data
+    - a: /b
+  ports:
+    - 5432:5432
+    - 80:80
+  environment:
+    - POSTGRES_DB: aiida
+    - POSTGRES_USER: admin
+    - POSTGRES_PASSWORD: admin
+
+networks:
+  scinet:
+
+volumes:
+  postgresdata:
+  a:

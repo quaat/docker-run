@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docker-run"
+version = "0.1.0"
+authors = [{ name = "Thomas F. Hagelien", email = "thomas.f.hagelien@sintef.no" }]
+description = "A utility to run preconfigured Docker containers."
+readme = "README.md"
+license = { file="LICENSE" }
+dependencies = [
+    "PyYAML",
+]
+
+[project.scripts]
+docker-run = "docker_run.cli:main"
